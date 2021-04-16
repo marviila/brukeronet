@@ -28,7 +28,7 @@ result_df['data hora'] = result_df['data hora'].apply(lambda x: x.strftime('%Y-%
 result_df['pi_value1'] = result_df['pi_value1'].str.replace(',','.')
 
 result_df.loc[result_df["measurement_desc"] == 'degomagem_enzimatica_acidez_secador', 'measurement_desc' ] = 'Acid_Oil_Degumming'
-result_df.loc[result_df["measurement_desc"] == 'degomagem_enzimatica_sabão_ika', 'measurement_desc' ] = 'Soap_Oil_Degumming'
+result_df.loc[result_df["measurement_desc"] == 'degomagem_enzimatica_sabao_ika', 'measurement_desc' ] = 'Soap_Oil_Degumming'
 result_df.loc[result_df["measurement_desc"] == 'degomagem_enzimatica_spin_test', 'measurement_desc' ] = 'Spin_Oil_Degumming'
 result_df.loc[result_df["measurement_desc"] == 'degomagem_enzimatica_umidade_goma', 'measurement_desc' ] = 'Moisture_Gums_Degumming'
 result_df.loc[result_df["measurement_desc"] == 'clarificacao_cor_vermelha', 'measurement_desc' ] = 'RedColor_Oil_Bleaching'
@@ -43,4 +43,4 @@ result_df.loc[result_df["measurement_desc"] == 'desodorizacao_cor_vermelha', 'me
 
 result_df = result_df.dropna()
 
-result_df.to_csv("historical_quality.csv", sep='\t', index=0)
+result_df.to_csv("historical_quality.csv", sep=';', index=0)
